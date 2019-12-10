@@ -1,0 +1,36 @@
+function clickonsuccess() {
+  alert("success");
+  createSuccessToast("everything is fine");
+}
+
+function clickonerror() {
+  alert("error");
+  createErrorToast("something went wrong");
+}
+
+function createSuccessToast(toastMessage) {
+  createToast(true, toastMessage);
+}
+
+function createErrorToast(toastMessage) {
+  createToast(false, toastMessage);
+}
+
+function createToast(isSuccess, toastMessage) {
+  var toastContainer = createToastContainer(isSuccess);
+  createToastHeader(toastContainer, isSuccess);
+  createToastContent(toastContainer, toastMessage);
+  initToast(toastContainer);
+  destroyToast(toastContainer);
+}
+
+function createToastContainer(isSuccess) {
+  var toastContainer = document.createElement("div");
+  toastContainer.classList.add("toastContainer");
+  if (isSuccess) {
+    toastContainer.classList.add("toastContainerSuccess");
+  } else {
+    toastContainer.classList.add("toastContainerError");
+  }
+  return toastContainer;
+}
