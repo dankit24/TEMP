@@ -1,0 +1,36 @@
+.toastContainer {
+  margin-top: 10px;
+  margin-left: auto;
+  border-radius: 5px;
+  padding: 10px;
+  color: #000000;
+  z-index: 1; 
+  height: auto;
+  width:350px;
+  box-shadow: 5px 5px lightgray;
+}
+
+.toastContainerSuccess{
+  border-bottom: 2px solid darkgreen;
+  background-color: #73bb2a;
+}
+
+.toastContainerError{
+  border-bottom: 2px solid darkred;
+  background-color: #ff1a1a;
+}
+
+.toastContainerInfo{
+  border-bottom: 2px solid darkblue;
+  background-color: #87ceeb;
+}
+
+.toastContainerWarning{
+  border-bottom: 2px solid yellow;
+  background-color: #dada1e;
+}
+
+#toastHeader {
+font-size: medium;
+ display: inline-block;
+}
