@@ -1,0 +1,7 @@
+const {Property} = require('postman-collection');
+
+let randomFirstName = Property.replaceSubstitutions("{{$randomFirstName}}");
+let randomLastName = Property.replaceSubstitutions("{{$randomLastName}}");
+
+console.log(randomFirstName);
+console.log(randomLastName);
